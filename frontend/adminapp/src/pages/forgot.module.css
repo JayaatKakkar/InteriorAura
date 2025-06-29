@@ -1,0 +1,88 @@
+.forgotPasswordContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background: url('https://thumbs.dreamstime.com/b/brown-wave-stream-abstract-background-vector-pattern-eps-163408194.jpg') no-repeat center center;
+}
+
+.forgotPasswordForm {
+  background: #ffffff;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.forgotPasswordHeading {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.formInput:focus {
+  border-color: #1800b3;
+}
+
+.formButton {
+  width: 70%;
+  padding: 12px;
+  background-color:  #1a2035;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.formButton:hover {
+  background-color:   #B78D65;
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alertSuccess {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alertDanger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 768px) {
+  .forgotPasswordForm {
+    padding: 20px;
+    width: 90%;
+  }
+}

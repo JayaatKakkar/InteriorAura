@@ -1,0 +1,63 @@
+.login{
+    background-color: rgb(42, 56, 165);
+    width: 22%;
+}
+    /* body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden; 
+      }     
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+        background-size: cover;
+        filter: blur(10px); 
+        z-index: -1; 
+      }      */
+      .container {
+        position: relative;
+        z-index: 1; 
+        padding: 20px;
+        color: rgb(9, 9, 9);
+      }
+      .form-container {
+        max-width: 800px;
+        height: 620px; 
+        margin: 50px auto;
+        background: white;
+        display: flex;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      .form-image {
+        flex: 1;
+        background: url('https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center;
+        background-size: cover;
+        position: relative;
+          height: 100%;
+      }
+      .form-image::before {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+      .form-box {
+        flex: 1;
+        padding: 40px;
+      }
+      .form-box h4 {
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+      .form-control::placeholder {
+        color: #aaa;
+      }
