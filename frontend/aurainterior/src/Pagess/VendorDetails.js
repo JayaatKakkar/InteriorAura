@@ -13,7 +13,7 @@ export default function VendorDetails() {
   const [materialOptions, setMaterialOptions] = useState([]);
   const [allMaterials, setAllMaterials] = useState([]);
 
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://interioraura.onrender.com/";
 
   const fetchVendor = async () => {
     try {

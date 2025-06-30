@@ -20,7 +20,7 @@ const Offer = () => {
 
   const fetchOffers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Offer');
+      const res = await axios.get('https://interioraura.onrender.com/Offer');
       if (Array.isArray(res.data)) {
         setOfrs(res.data);
       } else {
@@ -49,12 +49,12 @@ const Offer = () => {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/Offer/${editingId}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/Offer/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/Offer', formData, {
+        await axios.post('https://interioraura.onrender.com/Offer', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
@@ -76,7 +76,7 @@ const Offer = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/Offer/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Offer/${id}`);
       fetchOffers();
     } catch (err) {
       console.error("Delete error:", err);
@@ -176,7 +176,7 @@ const Offer = () => {
                   <div className="mt-2">
                     <p>Current Image:</p>
                     <img
-                      src={`http://localhost:5000/${existingImage}`}
+                      src={`https://interioraura.onrender.com/${existingImage}`}
                       alt="Current offer"
                       width="120"
                       height="120"
@@ -227,7 +227,7 @@ const Offer = () => {
                     <td>
                       {ofr.offer_image && (
                         <img
-                          src={`http://localhost:5000/${ofr.offer_image}`}
+                          src={`https://interioraura.onrender.com/${ofr.offer_image}`}
                           alt="offer"
                           width="120"
                           height="120"

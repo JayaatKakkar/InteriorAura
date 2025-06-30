@@ -29,7 +29,7 @@ const BlueprintForm = () => {
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const parentRes = await fetch('http://localhost:5000/api/category/parents');
+      const parentRes = await fetch('https://interioraura.onrender.com/api/category/parents');
       const parentData = await parentRes.json();
       setParentCategories(parentData);
       
@@ -47,7 +47,7 @@ useEffect(() => {
 
   const fetchMaterials = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Material');
+      const res = await axios.get('https://interioraura.onrender.com/Material');
       setMaterialId(res.data);
     } catch (err) {
       console.error("Failed to fetch materials", err);
@@ -56,7 +56,7 @@ useEffect(() => {
 
   const fetchDimensions = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Dimension');
+      const res = await axios.get('https://interioraura.onrender.com/Dimension');
       setDimensionId(res.data);
     } catch (err) {
       console.error("Failed to fetch dimensions", err);
@@ -65,7 +65,7 @@ useEffect(() => {
 
   const fetchSubCategories = async (parentId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subs/${parentId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subs/${parentId}`);
       const data = await res.json();
       setSubCategories(data);
     } catch (err) {
@@ -76,7 +76,7 @@ useEffect(() => {
 
   const fetchSubSubCategories = async (subCatId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subsubs/${subCatId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subsubs/${subCatId}`);
       const data = await res.json();
       setSubSubCategories(data);
     } catch (err) {
@@ -87,7 +87,7 @@ useEffect(() => {
 
   const fetchFilteredMaterials = async (subSubCategoryId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/Material/catmat/${subSubCategoryId}`);
+      const res = await axios.get(`https://interioraura.onrender.com/Material/catmat/${subSubCategoryId}`);
       setMaterialId(res.data);
     } catch (err) {
       console.error("Failed to fetch filtered materials", err);
@@ -96,7 +96,7 @@ useEffect(() => {
 
   const fetchFilteredDimensions = async (subSubCategoryId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/Dimension/catdim/${subSubCategoryId}`);
+      const res = await axios.get(`https://interioraura.onrender.com/Dimension/catdim/${subSubCategoryId}`);
       setDimensionId(res.data);
     } catch (err) {
       console.error("Failed to fetch filtered dimensions", err);
@@ -158,12 +158,12 @@ useEffect(() => {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/Blueprint/${editingId}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/Blueprint/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/Blueprint', formData, {
+        await axios.post('https://interioraura.onrender.com/Blueprint', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
@@ -192,7 +192,7 @@ useEffect(() => {
 
   const fetchBlueprints = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Blueprint');
+      const res = await axios.get('https://interioraura.onrender.com/Blueprint');
       setBlps(res.data);
     } catch (err) {
       console.error("Failed to fetch blueprints", err);
@@ -225,7 +225,7 @@ useEffect(() => {
 const handleDelete = async (id) => {
   if (window.confirm("Are you sure you want to delete this blueprint?")) {
     try {
-      await axios.delete(`http://localhost:5000/Blueprint/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Blueprint/${id}`);
       fetchBlueprints();
     } catch (err) {
       console.error("Error deleting blueprint:", err);
@@ -333,7 +333,7 @@ const handleDelete = async (id) => {
                   <div className="mt-2">
                     <p>Current Image:</p>
                     <img
-                      src={`http://localhost:5000/${existingImage}`}
+                      src={`https://interioraura.onrender.com/${existingImage}`}
                       alt="Current dimension"
                       width="120"
                       height="120"
@@ -392,7 +392,7 @@ const handleDelete = async (id) => {
                   <td>{bp.status}</td>
                                       <td>
                       <img
-                        src={`http://localhost:5000/${bp.blueprint_image}`}
+                        src={`https://interioraura.onrender.com/${bp.blueprint_image}`}
                         alt="dimension"
                         width="80"
                         height="80"

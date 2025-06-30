@@ -20,7 +20,7 @@ export default function Services() {
     console.log("Selected Parent Category ID:", parent_id);
 
     // Fetch sub-categories
-    fetch(`http://localhost:5000/api/category/subs/${parent_id}`)
+    fetch(`https://interioraura.onrender.com/api/category/subs/${parent_id}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -39,7 +39,7 @@ export default function Services() {
       });
 
     // Initial vendor data
-    axios.post("http://localhost:5000/Vendorlabelprice/filter", {
+    axios.post("https://interioraura.onrender.com/Vendorlabelprice/filter", {
       parentCategory: parent_id,
       subCategory: null,
       subSubCategory: null
@@ -59,7 +59,7 @@ export default function Services() {
     setSelectedSubSubCategory(null);
     setVendorData([]);
 
-    fetch(`http://localhost:5000/api/category/subsubs/${category}`)
+    fetch(`https://interioraura.onrender.com/api/category/subsubs/${category}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -77,7 +77,7 @@ export default function Services() {
         setParentSubSubCategories([]);
       });
 
-    axios.post("http://localhost:5000/Vendorlabelprice/filter", {
+    axios.post("https://interioraura.onrender.com/Vendorlabelprice/filter", {
       parentCategory: parent_id,
       subCategory: category,
       subSubCategory: null,
@@ -95,7 +95,7 @@ export default function Services() {
   const handleSubSubCategoryClick = (subSubCat) => {
     setSelectedSubSubCategory(subSubCat._id);
 
-    axios.post("http://localhost:5000/Vendorlabelprice/filter", {
+    axios.post("https://interioraura.onrender.com/Vendorlabelprice/filter", {
       parentCategory: parent_id,
       subCategory: selectedSubCategory,
       subSubCategory: subSubCat._id
@@ -169,7 +169,7 @@ export default function Services() {
     src={
       vendor.vendor_image.startsWith("http")
         ? vendor.vendor_image
-        : `http://localhost:5000/${vendor.vendor_image}`
+        : `https://interioraura.onrender.com/${vendor.vendor_image}`
     }
     alt="Vendor"
     style={styles.vendorImage}

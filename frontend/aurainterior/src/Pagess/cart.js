@@ -17,7 +17,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchOffers = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/Offer');
+        const { data } = await axios.get('https://interioraura.onrender.com/Offer');
         const today = new Date();
         const validOffers = data.filter(({ starting_date, end_date }) => {
           const start = new Date(starting_date);
@@ -119,7 +119,7 @@ const Cart = () => {
                       <tr key={item._id}>
                         <td>
                           <img
-                            src={`http://localhost:5000/uploads/${item.vendor_id.vendor_image}`}
+                            src={`https://interioraura.onrender.com/uploads/${item.vendor_id.vendor_image}`}
                             alt={item.vendor_id.name_prod}
                             className="rounded-circle"
                             style={{ width: 80, height: 80, objectFit: 'cover' }}

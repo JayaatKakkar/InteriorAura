@@ -8,7 +8,7 @@ export default function OrdersPage() {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const response = await fetch("http://localhost:5000/orders"); // adjust API URL
+        const response = await fetch("https://interioraura.onrender.com/orders"); // adjust API URL
         if (!response.ok) throw new Error("Failed to fetch orders");
         const data = await response.json();
         setOrders(data);

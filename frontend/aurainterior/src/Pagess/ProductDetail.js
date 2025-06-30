@@ -7,7 +7,7 @@ export default function ProductDetail() {
   const [vendorDetails, setVendorDetails] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/Vendorlabelprice/${vendorId}`)
+    axios.get(`https://interioraura.onrender.com/Vendorlabelprice/${vendorId}`)
       .then((response) => {
         setVendorDetails(response.data);
       })
@@ -29,7 +29,7 @@ export default function ProductDetail() {
             src={
               vendorDetails.vendor_image.startsWith("http")
                 ? vendorDetails.vendor_image
-                : `http://localhost:5000/${vendorDetails.vendor_image}`
+                : `https://interioraura.onrender.com/${vendorDetails.vendor_image}`
             }
             alt="Vendor"
             style={styles.vendorImage}

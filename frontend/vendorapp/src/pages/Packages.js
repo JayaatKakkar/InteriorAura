@@ -20,7 +20,7 @@ const Packages = () => {
 
   const fetchPackages = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/packs');
+      const res = await axios.get('https://interioraura.onrender.com/packs');
       if (Array.isArray(res.data)) {
         setPcks(res.data);
       } else {
@@ -49,12 +49,12 @@ const Packages = () => {
 
     try {
       if (editingId_package) {
-        await axios.put(`http://localhost:5000/packs/${editingId_package}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/packs/${editingId_package}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setEditingIdPackage(null);
       } else {
-        await axios.post('http://localhost:5000/packs', formData, {
+        await axios.post('https://interioraura.onrender.com/packs', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
@@ -76,7 +76,7 @@ const Packages = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/packs/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/packs/${id}`);
       fetchPackages();
     } catch (err) {
       console.error("Delete error:", err);
@@ -172,7 +172,7 @@ const Packages = () => {
                   <div className="mt-2">
                     <p>Current Image:</p>
                     <img
-                      src={`http://localhost:5000/${existingImage}`}
+                      src={`https://interioraura.onrender.com/${existingImage}`}
                       alt="Current offer"
                       width="120"
                       height="120"
@@ -224,7 +224,7 @@ const Packages = () => {
                     <td>
                       {pck.package_image && (
                         <img
-                          src={`http://localhost:5000/${pck.package_image}`}
+                          src={`https://interioraura.onrender.com/${pck.package_image}`}
                           alt="offer"
                           width="120"
                           height="120"

@@ -7,7 +7,7 @@ const CategoryList = () => {
   const [editing, setEditing] = useState(null);
 
   const loadCategories = () => {
-    fetch('http://localhost:5000/api/category')
+    fetch('https://interioraura.onrender.com/api/category')
       .then(res => res.json())
       .then(data => {
         // Ensure data is always an array
@@ -27,7 +27,7 @@ const CategoryList = () => {
     const confirmDelete = window.confirm('Are you sure you want to delete this category?');
     if (!confirmDelete) return;
 
-    const res = await fetch(`http://localhost:5000/api/category/${id}`, {
+    const res = await fetch(`https://interioraura.onrender.com/api/category/${id}`, {
       method: 'DELETE',
     });
 

@@ -11,7 +11,7 @@ const VendorList = () => {
     try {
       const token = localStorage.getItem("Admintoken");
 
-const res = await axios.get("http://localhost:5000/api/vendor_auth/vendors/all");
+const res = await axios.get("https://interioraura.onrender.com/api/vendor_auth/vendors/all");
 
       setVendor(res.data);
     } catch (err) {
@@ -23,7 +23,7 @@ const res = await axios.get("http://localhost:5000/api/vendor_auth/vendors/all")
 
 const handleStatusUpdate = async (id, status) => {
   try {
-    await axios.put(`http://localhost:5000/api/vendor_auth/status/${id}`, { status });
+    await axios.put(`https://interioraura.onrender.com/api/vendor_auth/status/${id}`, { status });
     alert(`Vendor has been ${status}.`);
     fetchVendors(); // Refresh the list
   } catch (err) {

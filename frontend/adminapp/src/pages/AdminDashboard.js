@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchBlueprints = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/Getstarted');
+        const res = await axios.get('https://interioraura.onrender.com/Getstarted');
         setBlueprints(res.data);
       } catch (err) {
         console.error("Failed to fetch blueprints", err);
@@ -22,7 +22,7 @@ const AdminDashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/Getstarted/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Getstarted/${id}`);
       setBlueprints(prev => prev.filter(bp => bp._id !== id));
     } catch (err) {
       console.error("Delete error:", err);
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
                   {/* <td style={{ width: '150px' }}>
                     {bp.getstarted_image ? (
                       <img
-                        src={`http://localhost:5000/${bp.getstarted_image}`}
+                        src={`https://interioraura.onrender.com/${bp.getstarted_image}`}
                         alt={bp.parent_cat?.name}
                         style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                       />

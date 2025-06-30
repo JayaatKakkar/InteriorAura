@@ -379,7 +379,7 @@ const Dimension = () => {
   // const shapeOptions = ["L shape", "U shape", "Circle", "Triangle", "Cylinder"];
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/category/parents')
+    fetch('https://interioraura.onrender.com/api/category/parents')
       .then(res => res.json())
       .then(setParentCategories)
       .catch(err => console.error("Failed to fetch parent categories", err));
@@ -389,7 +389,7 @@ const Dimension = () => {
 
   const fetchDimensions = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Dimension');
+      const res = await axios.get('https://interioraura.onrender.com/Dimension');
       setDims(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       console.error("Fetch error:", err);
@@ -399,7 +399,7 @@ const Dimension = () => {
 
   const fetchSubCategories = async (parentId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subs/${parentId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subs/${parentId}`);
       const data = await res.json();
       setSubCategories(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -410,7 +410,7 @@ const Dimension = () => {
 
   const fetchSubSubCategories = async (subCatId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subsubs/${subCatId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subsubs/${subCatId}`);
       const data = await res.json();
       setSubSubCategories(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -463,12 +463,12 @@ const Dimension = () => {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/Dimension/${editingId}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/Dimension/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/Dimension', formData, {
+        await axios.post('https://interioraura.onrender.com/Dimension', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
@@ -523,7 +523,7 @@ const Dimension = () => {
 const handleDelete = async (id) => {
   if (window.confirm("Are you sure you want to delete this dimension?")) {
     try {
-      await axios.delete(`http://localhost:5000/Dimension/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Dimension/${id}`);
       fetchDimensions();
     } catch (err) {
       console.error("Delete error:", err);
@@ -680,7 +680,7 @@ const handleDelete = async (id) => {
                   <div className="mt-2">
                     <p>Current Image:</p>
                     <img
-                      src={`http://localhost:5000/${existingImage}`}
+                      src={`https://interioraura.onrender.com/${existingImage}`}
                       alt="Current dimension"
                       width="120"
                       height="120"
@@ -755,7 +755,7 @@ const handleDelete = async (id) => {
                     <td>{dim.unit}</td>
                     <td>
                       <img
-                        src={`http://localhost:5000/${dim.dimension_image}`}
+                        src={`https://interioraura.onrender.com/${dim.dimension_image}`}
                         alt="dimension"
                         width="80"
                         height="80"

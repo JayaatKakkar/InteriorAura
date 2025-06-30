@@ -36,7 +36,7 @@ const Appointment = () => {
     const fetchArchitects = async () => {
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:5000/Architectprofile');
+        const res = await axios.get('https://interioraura.onrender.com/Architectprofile');
         setArchitectList(res.data);
       } catch (err) {
         console.error('Failed to fetch architects:', err);
@@ -84,7 +84,7 @@ const Appointment = () => {
         app_desc: appointmentData.description,
       };
 
-      await axios.post('http://localhost:5000/Appointment', payload);
+      await axios.post('https://interioraura.onrender.com/Appointment', payload);
 
       alert('Appointment booked successfully!');
 

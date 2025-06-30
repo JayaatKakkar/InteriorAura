@@ -17,7 +17,7 @@ function Client_Signup() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/client/signup", {
+      const res = await axios.post("https://interioraura.onrender.com/api/client/signup", {
         name,
         email,
         password,

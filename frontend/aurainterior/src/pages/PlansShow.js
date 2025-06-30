@@ -13,7 +13,7 @@ function PlansShow() {
   useEffect(() => {
     const fetchVendorPlanData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/Vendorlabelprice');
+        const response = await fetch('https://interioraura.onrender.com/Vendorlabelprice');
         const data = await response.json();
         setVendorPlanData(data);
 
@@ -32,7 +32,7 @@ function PlansShow() {
   if (plan) {
     const fetchRelatedVendorLabels = async () => {
       try {
-        const response = await fetch('http://localhost:5000/Vendorlabelprice/filter', {
+        const response = await fetch('https://interioraura.onrender.com/Vendorlabelprice/filter', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const handleVendorClick = (vendor) => {
     <div style={styles.container}>
       <div style={styles.card}>
         <img
-          src={`http://localhost:5000/${plan.blueprint_image}`}
+          src={`https://interioraura.onrender.com/${plan.blueprint_image}`}
           alt={plan.name}
           style={styles.image}
         />
@@ -123,7 +123,7 @@ const handleVendorClick = (vendor) => {
     onClick={() => handleVendorClick(vendor)}
   >
     <img
-      src={`http://localhost:5000/${vendor.vendor_image}`}
+      src={`https://interioraura.onrender.com/${vendor.vendor_image}`}
       alt={`Vendor ${idx + 1}`}
       style={styles.relatedImage}
     />

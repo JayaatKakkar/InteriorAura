@@ -29,7 +29,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       // Fetch parent categories
-      const parentRes = await fetch('http://localhost:5000/api/category/parents');
+      const parentRes = await fetch('https://interioraura.onrender.com/api/category/parents');
       const parentData = await parentRes.json();
       setParentCategories(parentData);
 
@@ -63,7 +63,7 @@ if (user) {
 
   const fetchMaterials = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Material');
+      const res = await axios.get('https://interioraura.onrender.com/Material');
       setMaterialId(res.data);
     } catch (err) {
       console.error("Failed to fetch materials", err);
@@ -72,7 +72,7 @@ if (user) {
 
   const fetchDimensions = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Dimension');
+      const res = await axios.get('https://interioraura.onrender.com/Dimension');
       setDimensionId(res.data);
     } catch (err) {
       console.error("Failed to fetch dimensions", err);
@@ -81,7 +81,7 @@ if (user) {
 
   const fetchSubCategories = async (parentId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subs/${parentId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subs/${parentId}`);
       const data = await res.json();
       setSubCategories(data);
     } catch (err) {
@@ -92,7 +92,7 @@ if (user) {
 
   const fetchSubSubCategories = async (subCatId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subsubs/${subCatId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subsubs/${subCatId}`);
       const data = await res.json();
       setSubSubCategories(data);
     } catch (err) {
@@ -103,7 +103,7 @@ if (user) {
 
   const fetchFilteredMaterials = async (subSubCategoryId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/Material/catmat/${subSubCategoryId}`);
+      const res = await axios.get(`https://interioraura.onrender.com/Material/catmat/${subSubCategoryId}`);
       setMaterialId(res.data);
     } catch (err) {
       console.error("Failed to fetch filtered materials", err);
@@ -112,7 +112,7 @@ if (user) {
 
   const fetchFilteredDimensions = async (subSubCategoryId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/Dimension/catdim/${subSubCategoryId}`);
+      const res = await axios.get(`https://interioraura.onrender.com/Dimension/catdim/${subSubCategoryId}`);
       setDimensionId(res.data);
     } catch (err) {
       console.error("Failed to fetch filtered dimensions", err);
@@ -172,12 +172,12 @@ if (user) {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/Vendorlabelprice/${editingId}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/Vendorlabelprice/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/Vendorlabelprice', formData, {
+        await axios.post('https://interioraura.onrender.com/Vendorlabelprice', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
       }
@@ -205,7 +205,7 @@ if (user) {
 
   const fetchVendorpricelabels = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Vendorlabelprice');
+      const res = await axios.get('https://interioraura.onrender.com/Vendorlabelprice');
       setVnds(res.data);
     } catch (err) {
       console.error("Failed to fetch blueprints", err);
@@ -230,7 +230,7 @@ if (user) {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/Vendorlabelprice/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Vendorlabelprice/${id}`);
       fetchVendorpricelabels();
     } catch (err) {
       console.error("Error deleting blueprint:", err);
@@ -339,7 +339,7 @@ if (user) {
                       {editingId && existingImage && (
                 <div className="mt-2">
                   <p>Current Image:</p>
-                  <img src={`http://localhost:5000/${existingImage}`} alt="material" width="120" height="120" />
+                  <img src={`https://interioraura.onrender.com/${existingImage}`} alt="material" width="120" height="120" />
                 </div>
               )}
             </div>
@@ -387,7 +387,7 @@ if (user) {
                   <td>{vd.status}</td>
                  <td>
                       <img
-                        src={`http://localhost:5000/${vd.vendor_image}`}
+                        src={`https://interioraura.onrender.com/${vd.vendor_image}`}
                         alt="dimension"
                         width="80"
                         height="80"

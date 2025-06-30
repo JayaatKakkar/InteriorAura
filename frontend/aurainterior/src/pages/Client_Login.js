@@ -16,7 +16,7 @@ const  Client_Login=({setIsAuthenticated }) => {
         setError("");
     
         try {
-          const res = await axios.post("http://localhost:5000/api/client/login", {
+          const res = await axios.post("https://interioraura.onrender.com/api/client/login", {
             email,
             password,
           });

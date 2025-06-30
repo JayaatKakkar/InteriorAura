@@ -153,7 +153,7 @@ const Teampage1 = () => {
   useEffect(() => {
     const fetchArchitects = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/Architectprofile');
+        const res = await axios.get('https://interioraura.onrender.com/Architectprofile');
         setArchitects(res.data);
       } catch (err) {
         console.error('Error fetching architects:', err);
@@ -208,7 +208,7 @@ const Teampage1 = () => {
                 <div className="position-relative">
                   <img
                     className="img-fluid"
-                    src={`http://localhost:5000/${architect.architect_image}`}
+                    src={`https://interioraura.onrender.com/${architect.architect_image}`}
                     alt={architect.architect_name}
                     style={{ height: '300px', width: '100%', objectFit: 'cover' }}
                   />
@@ -279,7 +279,7 @@ const Teampage1 = () => {
                 <div className="modal-body d-flex flex-column flex-md-row gap-4">
                   <div className="col-md-6">
                     <img
-                      src={`http://localhost:5000/${selectedArchitect.architect_image}`}
+                      src={`https://interioraura.onrender.com/${selectedArchitect.architect_image}`}
                       alt={selectedArchitect.architect_name}
                       className="img-fluid rounded"
                       style={{ width: '100%', height: 'auto', objectFit: 'cover' }}

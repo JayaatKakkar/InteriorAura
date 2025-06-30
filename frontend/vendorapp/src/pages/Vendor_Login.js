@@ -30,7 +30,7 @@ const Vendor_Login = ({ setIsAuthenticated }) => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/vendor_auth/login", {
+      const res = await axios.post("https://interioraura.onrender.com/api/vendor_auth/login", {
         email: loginEmail,
         password,
       });
@@ -68,7 +68,7 @@ const Vendor_Login = ({ setIsAuthenticated }) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/vendor_auth/register", {
+      const res = await axios.post("https://interioraura.onrender.com/api/vendor_auth/register", {
         name,
         email: signupEmail,
         mobile_no,

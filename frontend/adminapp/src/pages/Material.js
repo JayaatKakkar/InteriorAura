@@ -37,7 +37,7 @@ const Material = () => {
 
   const fetchParentCategories = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/category/parents');
+      const res = await fetch('https://interioraura.onrender.com/api/category/parents');
       const data = await res.json();
       setParentCategories(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -47,7 +47,7 @@ const Material = () => {
 
   const fetchMaterials = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/Material');
+      const res = await axios.get('https://interioraura.onrender.com/Material');
       setMtrs(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       console.error('Fetch error:', err);
@@ -57,7 +57,7 @@ const Material = () => {
 
   const fetchSubCategories = async (parentId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subs/${parentId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subs/${parentId}`);
       const data = await res.json();
       setSubCategories(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -67,7 +67,7 @@ const Material = () => {
 
   const fetchSubSubCategories = async (subCatId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/category/subsubs/${subCatId}`);
+      const res = await fetch(`https://interioraura.onrender.com/api/category/subsubs/${subCatId}`);
       const data = await res.json();
       setSubSubCategories(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -116,12 +116,12 @@ const Material = () => {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/Material/${editingId}`, formData, {
+        await axios.put(`https://interioraura.onrender.com/Material/${editingId}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
         setEditingId(null);
       } else {
-        await axios.post('http://localhost:5000/Material', formData, {
+        await axios.post('https://interioraura.onrender.com/Material', formData, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
       }
@@ -169,7 +169,7 @@ const Material = () => {
 const handleDelete = async (id) => {
   if (window.confirm("Are you sure you want to delete this material?")) {
     try {
-      await axios.delete(`http://localhost:5000/Material/${id}`);
+      await axios.delete(`https://interioraura.onrender.com/Material/${id}`);
       fetchMaterials();
     } catch (err) {
       console.error('Delete error:', err);
@@ -238,7 +238,7 @@ const handleDelete = async (id) => {
               {editingId && existingImage && (
                 <div className="mt-2">
                   <p>Current Image:</p>
-                  <img src={`http://localhost:5000/${existingImage}`} alt="material" width="120" height="120" />
+                  <img src={`https://interioraura.onrender.com/${existingImage}`} alt="material" width="120" height="120" />
                 </div>
               )}
             </div>
@@ -293,7 +293,7 @@ const handleDelete = async (id) => {
                     <td>{mtr.sub_sub_cat?.name || '-'}</td>
                     <td>
                       {mtr.material_image && (
-                        <img src={`http://localhost:5000/${mtr.material_image}`} alt="material" width="120" height="120" />
+                        <img src={`https://interioraura.onrender.com/${mtr.material_image}`} alt="material" width="120" height="120" />
                       )}
                     </td>
                     <td>{mtr.submittedby}</td>

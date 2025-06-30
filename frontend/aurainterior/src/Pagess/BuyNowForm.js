@@ -49,7 +49,7 @@ export default function BuyNowPage() {
     // Fetch available offers
 const fetchOffers = async () => {
   try {
-    const res = await fetch("http://localhost:5000/offer");
+    const res = await fetch("https://interioraura.onrender.com/offer");
     if (!res.ok) throw new Error("Failed to fetch offers");
 
     const data = await res.json();
@@ -131,7 +131,7 @@ fetchOffers();
     };
 
 try {
-  const response = await fetch("http://localhost:5000/orders", {
+  const response = await fetch("https://interioraura.onrender.com/orders", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -156,7 +156,7 @@ try {
     const handleCancel = (id) => {
   if (window.confirm("Are you sure you want to cancel this booking?")) {
     setIsCancelling(true);
-    axios.delete(`http://localhost:5000/orders/${id}`)
+    axios.delete(`https://interioraura.onrender.com/orders/${id}`)
       .then(() => {
         alert("Thank you, your booking has been cancelled.");
       })
@@ -167,7 +167,7 @@ try {
 
 const handlePayment = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/payment/order", {
+    const res = await fetch("https://interioraura.onrender.com/api/payment/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({orderid}),
@@ -216,7 +216,7 @@ const handlePaymentVerify = async (data) => {
       };
 
       try {
-        const res = await fetch("http://localhost:5000/api/payment/verify", {
+        const res = await fetch("https://interioraura.onrender.com/api/payment/verify", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(verifyBody),
@@ -556,7 +556,7 @@ background-color: #0056b3;
             src={
               product.vendor_image?.startsWith("http")
                 ? product.vendor_image
-                : `http://localhost:5000/${product.vendor_image}`
+                : `https://interioraura.onrender.com/${product.vendor_image}`
             }
             alt={product.name_prod}
             onError={(e) => {

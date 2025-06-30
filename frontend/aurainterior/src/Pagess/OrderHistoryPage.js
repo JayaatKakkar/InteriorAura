@@ -12,7 +12,7 @@ export default function OrderHistoryPage() {
     }
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/orders?email=${encodeURIComponent(email)}`);
+      const res = await fetch(`https://interioraura.onrender.com/orders?email=${encodeURIComponent(email)}`);
       if (!res.ok) throw new Error("Failed to fetch orders");
       const data = await res.json();
       setOrders(data);

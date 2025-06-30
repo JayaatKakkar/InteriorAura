@@ -13,7 +13,7 @@ function Plans() {
 
     const fetchPlans = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/Blueprint?parentCategoryId=${categoryId}`);
+        const res = await fetch(`https://interioraura.onrender.com/Blueprint?parentCategoryId=${categoryId}`);
         const data = await res.json();
 
         if (Array.isArray(data)) {
@@ -89,7 +89,7 @@ const handleImageClick = (plan) => {
     <div style={{ position: 'relative' }}>
       {plan.blueprint_image && (
       <img
-        src={`http://localhost:5000/${plan.blueprint_image}`}
+        src={`https://interioraura.onrender.com/${plan.blueprint_image}`}
         alt={plan.name}
         style={{ ...styles.image, height: `${getRandomHeight()}px`, cursor: 'pointer' }}
         onClick={() => handleImageClick(plan)}

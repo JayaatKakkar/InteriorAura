@@ -194,7 +194,7 @@ const Middle = () => {
         //   process.env.PUBLIC_URL + "/orders/all"
         // );
          const response = await axios.get(
-          "http://localhost:5000/orders/all"
+          "https://interioraura.onrender.com/orders/all"
         );
         setOrders(response.data || []);
       } catch (error) {

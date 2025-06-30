@@ -11,7 +11,7 @@ const ArchitectList = () => {
     try {
       const token = localStorage.getItem("Admintoken");
 
-const res = await axios.get("http://localhost:5000/api/architect_auth/architects/all");
+const res = await axios.get("https://interioraura.onrender.com/api/architect_auth/architects/all");
 
       setArchitect(res.data);
     } catch (err) {
@@ -23,7 +23,7 @@ const res = await axios.get("http://localhost:5000/api/architect_auth/architects
 
 const handleStatusUpdate = async (id, status) => {
   try {
-    await axios.put(`http://localhost:5000/api/architect_auth/status/${id}`, { status });
+    await axios.put(`https://interioraura.onrender.com/api/architect_auth/status/${id}`, { status });
     alert(`Architect has been ${status}.`);
     fetchArchitects(); // Refresh the list
   } catch (err) {

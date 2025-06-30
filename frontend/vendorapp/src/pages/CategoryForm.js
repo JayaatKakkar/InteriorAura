@@ -15,7 +15,7 @@ const CategoryForm = ({ selected, onSave }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/category/parents')
+    fetch('https://interioraura.onrender.com/api/category/parents')
       .then(res => res.json())
       .then(data => {
         console.log('Received parent categories:', data);
@@ -50,7 +50,7 @@ const CategoryForm = ({ selected, onSave }) => {
   }, [selected]);
 
   const fetchSubCategories = async (parentId) => {
-    const res = await fetch(`http://localhost:5000/api/category/subs/${parentId}`);
+    const res = await fetch(`https://interioraura.onrender.com/api/category/subs/${parentId}`);
     if (res.ok) {
       const data = await res.json();
       setSubCategories(Array.isArray(data) ? data : []);
@@ -84,8 +84,8 @@ const CategoryForm = ({ selected, onSave }) => {
     };
 
     const url = selected
-      ? `http://localhost:5000/api/category/${selected._id}`
-      : 'http://localhost:5000/api/category';
+      ? `https://interioraura.onrender.com/api/category/${selected._id}`
+      : 'https://interioraura.onrender.com/api/category';
     const method = selected ? 'PUT' : 'POST';
 
     console.log('Sending payload:', payload);
