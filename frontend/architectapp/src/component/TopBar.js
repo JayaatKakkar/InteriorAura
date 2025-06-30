@@ -46,7 +46,7 @@ console.log(isAuthenticated);
             <div class="logo-header" data-background-color="dark">
               <a href="index.html" class="logo">
                 <img
-                  src="assets/img/kaiadmin/icon-1.png"
+                  src={process.env.PUBLIC_URL+"/assets/img/kaiadmin/icon-1.png"}
                   alt="navbar brand"
                   class="navbar-brand"
                     height="20"
