@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/client/forgot-password", {
+      const res = await axios.post("https://interioraura.onrender.com/api/client/forgot-password", {
         email,
       });
       setMessage(res.data.message);

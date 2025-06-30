@@ -21,7 +21,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/client/reset-password", {
+      const res = await axios.post("https://interioraura.onrender.com/api/client/reset-password", {
         token,
         newPassword,
       });

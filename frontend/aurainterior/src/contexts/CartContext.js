@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
       if (clientId) {
         try {
           // Fetch all cart items for this client, with vendor_id populated with name_prod, vendor_image, price
-          const res = await axios.get(`http://localhost:5000/api/cart/${clientId}`);
+          const res = await axios.get(`https://interioraura.onrender.com/api/cart/${clientId}`);
           if (isMounted && Array.isArray(res.data)) {
             setCartItems(res.data);
           } else {
@@ -45,7 +45,7 @@ export const CartProvider = ({ children }) => {
       if (existingItem) {
         // Update existing quantity on server
         const newQty = existingItem.quantity + quantity;
-        const res = await axios.put(`http://localhost:5000/api/cart/${existingItem._id}`, { quantity: newQty });
+        const res = await axios.put(`https://interioraura.onrender.com/api/cart/${existingItem._id}`, { quantity: newQty });
         // Update local state with returned populated item
         setCartItems((prev) =>
           prev.map((item) =>
@@ -54,7 +54,7 @@ export const CartProvider = ({ children }) => {
         );
       } else {
         // Add new item to cart
-        const res = await axios.post("http://localhost:5000/api/cart", {
+        const res = await axios.post("https://interioraura.onrender.com/api/cart", {
           clientId,
           vendor_id: vendorLabelId,
           quantity,
@@ -71,7 +71,7 @@ export const CartProvider = ({ children }) => {
     if (newQty <= 0) return removeItem(cartId);
 
     try {
-      const res = await axios.put(`http://localhost:5000/api/cart/${cartId}`, { quantity: newQty });
+      const res = await axios.put(`https://interioraura.onrender.com/api/cart/${cartId}`, { quantity: newQty });
 
       setCartItems((prev) =>
         prev.map((item) =>
@@ -86,7 +86,7 @@ export const CartProvider = ({ children }) => {
   // Remove item from cart
   const removeItem = async (cartId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/cart/${cartId}`);
+      await axios.delete(`https://interioraura.onrender.com/api/cart/${cartId}`);
 
       setCartItems((prev) => prev.filter((item) => item._id !== cartId));
     } catch (err) {

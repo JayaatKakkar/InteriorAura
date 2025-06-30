@@ -8,7 +8,7 @@ const Dashboard = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/auth/me", {
+        const res = await axios.get("https://interioraura.onrender.com/api/auth/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

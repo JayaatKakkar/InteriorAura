@@ -30,7 +30,7 @@ const NavBar = ({ isAuthenticated, setIsAuthenticated }) => {
       setUsername('');
     }
 
-    fetch('http://localhost:5000/api/category/parents')
+    fetch('https://interioraura.onrender.com/api/category/parents')
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched parent categories:", data);

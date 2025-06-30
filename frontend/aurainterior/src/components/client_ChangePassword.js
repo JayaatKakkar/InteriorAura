@@ -23,7 +23,7 @@ const ChangePassword = () => {
       const token = localStorage.getItem("token"); // or wherever you're storing it
 
       const res = await axios.post(
-        "http://localhost:5000/api/client/change-password",
+        "https://interioraura.onrender.com/api/client/change-password",
         { oldPassword, newPassword },
         {
           headers: {
