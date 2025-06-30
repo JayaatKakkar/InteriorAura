@@ -186,20 +186,20 @@ const ImageComparisonSlider = () => {
   const [tabs] = useState([
     {
       name: "Bedroom",
-      beforeSrc: "img/room2.jpg",
-      afterSrc: "img/room1.jpg",
+      beforeSrc: process.env.PUBLIC_URL +"/img/room2.jpg",
+      afterSrc: process.env.PUBLIC_URL +"/img/room1.jpg",
       icon: "fas fa-bed",
     },
     {
       name: "Living Room",
-      beforeSrc: "img/livingroom2.jpg",
-      afterSrc: "img/livingroom1.jpg",
+      beforeSrc: process.env.PUBLIC_URL +"/img/livingroom2.jpg",
+      afterSrc: process.env.PUBLIC_URL +"/img/livingroom1.jpg",
       icon: "fas fa-couch",
     },
     {
       name: "Dining Room",
-      beforeSrc: "img/dining2.jpg",
-      afterSrc: "img/dining1.jpg",
+      beforeSrc: process.env.PUBLIC_URL +"/img/dining2.jpg",
+      afterSrc: process.env.PUBLIC_URL +"/img/dining1.jpg",
       icon: "fas fa-utensils",
     },
   ]);

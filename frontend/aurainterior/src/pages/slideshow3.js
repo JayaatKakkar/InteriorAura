@@ -11,12 +11,12 @@ export default function Designers() {
   const designers = [
     {
       name: 'Ghianella',
-      img: '/img/team-1.jpg',
+      img: process.env.PUBLIC_URL +'/img/team-1.jpg',
       message: "Hey there, I’m Ghianella! I’m so excited to help you create your dream home!",
     },
-    { name: 'Freddi', img: '/img/test2.jpg', message: "Hi, I'm Freddi. Let's build something amazing!" },
-    { name: 'Jordan', img: '/img/test6.jpg', message: "I'm Jordan. Ready to get started on your project!" },
-    { name: 'Emmanuel', img: '/img/test5.jpg', message: "Hey, I'm Emmanuel! Let's create some stunning designs!" },
+    { name: 'Freddi', img:process.env.PUBLIC_URL + '/img/test2.jpg', message: "Hi, I'm Freddi. Let's build something amazing!" },
+    { name: 'Jordan', img: process.env.PUBLIC_URL +'/img/test6.jpg', message: "I'm Jordan. Ready to get started on your project!" },
+    { name: 'Emmanuel', img: process.env.PUBLIC_URL +'/img/test5.jpg', message: "Hey, I'm Emmanuel! Let's create some stunning designs!" },
   ];
 
   return (

@@ -306,7 +306,7 @@ return (
 const styles = {
   container: {
     height: '100vh',
-    backgroundImage: 'url("img/how-work3.jpg")',
+    backgroundImage: process.env.PUBLIC_URL +'url("/img/how-work3.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

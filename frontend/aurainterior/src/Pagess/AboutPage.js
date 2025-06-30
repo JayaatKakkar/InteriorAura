@@ -17,7 +17,7 @@ const AboutPage=()=>{
     const heroStyle = {
         height: '600px',
         width: '100%',
-        backgroundImage: "url('/img/how-work2.jpg')",
+        backgroundImage: "url('http://localhost:5000/img/how-work2.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

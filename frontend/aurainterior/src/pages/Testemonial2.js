@@ -8,61 +8,61 @@ const testimonials = [
     text: "I had a fantastic experience! The service was impeccable, and I highly recommend them.",
     author: "Aishwarya",
     location: "Mumbai, Maharashtra",
-    image: "img/test11.jpg"
+    image: process.env.PUBLIC_URL +"/img/test11.jpg"
   },
   {
     text: "Absolutely wonderful! I feel much more confident with their guidance and expertise.",
     author: "Michael Smith",
     location: "New Delhi, Delhi",
-    image: "img/test2.jpg"
+    image: process.env.PUBLIC_URL +"/img/test2.jpg"
   },
   {
     text: "A life-changing experience! Their team is dedicated and extremely knowledgeable.",
     author: "Arjun",
     location: "Bengaluru, Karnataka",
-    image: "img/test3.jpg"
+    image: process.env.PUBLIC_URL +"/img/test3.jpg"
   },
   {
     text: "The results speak for themselves. Truly grateful for everything they’ve done for me.",
     author: "Sameer",
     location: "Chennai, Tamil Nadu",
-    image: "img/test4.jpg"
+    image: process.env.PUBLIC_URL +"/img/test4.jpg"
   },
   {
     text: "I couldn’t be happier! Professional, responsive, and always available to help.",
     author: "Vihaan Kumar",
     location: "Hyderabad, Telangana",
-    image: "img/test5.jpg"
+    image: process.env.PUBLIC_URL +"/img/test5.jpg"
   },
   {
     text: "Amazing team and top-notch service. I highly recommend their services to everyone.",
     author: "Priya",
     location: "Kolkata, West Bengal",
-    image: "img/test6.jpg"
+    image: process.env.PUBLIC_URL +"/img/test6.jpg"
   },
   {
     text: "From start to finish, everything was perfect. They truly understand their craft.",
     author: "Aarav",
     location: "Pune, Maharashtra",
-    image: "img/test7.jpg"
+    image: process.env.PUBLIC_URL +"/img/test7.jpg"
   },
   {
     text: "A five-star experience! They went above and beyond my expectations.",
     author: "Rishabdeep Singh",
     location: "Jalandhar, Punjab",
-    image: "img/test8.jpg"
+    image: process.env.PUBLIC_URL +"/img/test8.jpg"
   },
   {
     text: "The most professional team I’ve ever worked with. They exceeded all my expectations.",
     author: "Damandeep Singh",
     location: "Amritsar, Punjab",
-    image: "img/test9.jpg"
+    image: process.env.PUBLIC_URL +"/img/test9.jpg"
   },
   {
     text: "I can't thank them enough for the incredible work they did. Truly exceptional.",
     author: "Harmandeep Singh",
     location: "Chandigarh, Punjab",
-    image: "img/test10.jpg"
+    image: process.env.PUBLIC_URL +"/img/test10.jpg"
   }
 ];
 

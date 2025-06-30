@@ -7,7 +7,7 @@ const SideBar = () => {
         <div className="logo-header" data-background-color="dark">
           <Link to="/" className="logo" style={{ color: "white" }}>
             <img
-              src="assets/img/kaiadmin/icon-1.png"
+              src={process.env.PUBLIC_URL +"/assets/img/kaiadmin/icon-1.png"}
               alt="navbar brand"
               className="navbar-brand"
               height="50"

@@ -77,8 +77,8 @@ const Detail=()=>{
             </div>
             <div className="col-lg-6">
             <ImageComparison
-                srcBefore="img/room1.jpg"
-                srcAfter="img/room2.jpg"
+                srcBefore={process.env.PUBLIC_URL +"/img/room1.jpg"}
+                srcAfter={process.env.PUBLIC_URL +"/img/room2.jpg"}
                 width={500}
                 height={300}
             />

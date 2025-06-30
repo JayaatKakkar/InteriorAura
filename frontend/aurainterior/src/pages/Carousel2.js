@@ -27,21 +27,21 @@ const Carousel2 = () => {
 
   const slides = [
     {
-      src: "img/5823707-uhd_2160_3840_24fps.mp4",
+      src: process.env.PUBLIC_URL + "/img/5823707-uhd_2160_3840_24fps.mp4",
       title1: "THE #1 INTERIOR DESIGN SERVICE",
       title: "Designing your ",
       title2: "dream home just",
       title3: "became a reality.",
     },
     {
-      src: "img/3308993-hd_1920_1080_30fps.mp4",
+      src: process.env.PUBLIC_URL + "/img/3308993-hd_1920_1080_30fps.mp4",
       title1: "THE #1 INTERIOR DESIGN SERVICE",
       title: "Designing your ",
       title2: "dream home just",
       title3: "became a reality.",
     },
     {
-      src: "img/7578552-uhd_3840_2160_30fps.mp4",
+      src: process.env.PUBLIC_URL + "/img/7578552-uhd_3840_2160_30fps.mp4",
       title1: "THE #1 INTERIOR DESIGN SERVICE",
       title: "Designing your ",
       title2: "dream home just",

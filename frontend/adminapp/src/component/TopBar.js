@@ -43,7 +43,7 @@ const TopBar = ({ isAuthenticated, setIsAuthenticated }) => {
         <div className="logo-header" data-background-color="dark">
           <a href="index.html" className="logo d-flex align-items-center">
             <img
-              src="assets/img/kaiadmin/icon-1.png"
+              src={process.env.PUBLIC_URL +"/assets/img/kaiadmin/icon-1.png"}
               alt="navbar brand"
               className="navbar-brand"
               height="20"

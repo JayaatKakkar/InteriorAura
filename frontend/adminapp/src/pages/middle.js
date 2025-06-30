@@ -190,8 +190,11 @@ const Middle = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(
-          process.env.REACT_APP_API_URL + "/orders/all"
+        // const response = await axios.get(
+        //   process.env.PUBLIC_URL + "/orders/all"
+        // );
+         const response = await axios.get(
+          "http://localhost:5000/orders/all"
         );
         setOrders(response.data || []);
       } catch (error) {

@@ -65,10 +65,10 @@ const Work=()=>{
             <div className="col-lg-5"  style={{ fontFamily: 'Tahoma, sans-serif', fontSize: '16px', color: '#555' ,textAlign: 'justify'}} >
                 <div style={rowStyle}>
                     <div style={columnStyle}>
-                        <img src="img/how-work4.jpg" alt="Snow" style={firstImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work4.jpg"} alt="Snow" style={firstImageStyle} />
                     </div>
                     <div style={columnStyle}>
-                        <img src="img/how-work3.jpg" alt="Forest" style={secondImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work3.jpg"} alt="Forest" style={secondImageStyle} />
                     </div>
                 </div>
             </div>
@@ -93,10 +93,10 @@ const Work=()=>{
             <div className="col-lg-5"  style={{ fontFamily: 'Tahoma, sans-serif', fontSize: '16px', color: '#555' ,textAlign: 'justify'}} >
             <div style={rowStyle}>
                     <div style={columnStyle}>
-                        <img src="img/how-work9.jpg" alt="Snow" style={firstImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work9.jpg"} alt="Snow" style={firstImageStyle} />
                     </div>
                     <div style={columnStyle}>
-                        <img src="img/how-work10.jpg" alt="Forest" style={secondImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work10.jpg"} alt="Forest" style={secondImageStyle} />
                     </div>
                 </div>
             </div>
@@ -121,10 +121,10 @@ const Work=()=>{
             <div className="col-lg-5"  style={{ fontFamily: 'Tahoma, sans-serif', fontSize: '16px', color: '#555' ,textAlign: 'justify'}} >
                 <div style={rowStyle}>
                     <div style={columnStyle}>
-                        <img src="img/how-work11.jpg" alt="Snow" style={firstImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work11.jpg"} alt="Snow" style={firstImageStyle} />
                     </div>
                     <div style={columnStyle}>
-                        <img src="img/how-work12.jpg" alt="Forest" style={secondImageStyle} />
+                        <img src= {process.env.PUBLIC_URL +"/img/how-work12.jpg"} alt="Forest" style={secondImageStyle} />
                     </div>
                 </div>
             </div>
